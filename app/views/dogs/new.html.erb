@@ -1,0 +1,7 @@
+<%=form_for @dog do |dog|%>
+<%=dog.label :breed%>
+<%=dog.text_field :breed%>
+<%=dog.label :name%>
+<%=dog.text_field :name%>
+<%=dog.submit "Create Dog"%>
+<%end%>
