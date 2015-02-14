@@ -5,4 +5,6 @@
   <%=dog.text_field :name%>
   <%=dog.submit "Update"%>
   <%=link_to "Cancel", dogs_path%>
+
   <%end%>
+  <%=link_to "Delete Dog", dog_path, method: :delete%>

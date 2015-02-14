@@ -32,6 +32,17 @@ class DogsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    dog = Dog.find(params[:id])
+    if dog.destroy
+      redirect_to dogs_path
+      flash[:notice] = "Dog was successfully deleted"
+    else
+      render :edit
+    end
+  end
+
   private
   def dog_params
     params.require(:dog).permit(:breed, :name, :age)
